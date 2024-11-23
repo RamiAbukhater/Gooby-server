@@ -26,7 +26,7 @@ const sendEmail = () => {
         from: emailSender,
         to: emailRecipient,
         subject: 'Website Visit Notification',
-        text: 'Someone visited your website!',
+        text: 'Gooby has been found!',
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
     sendEmail();
 
     // Respond to the visitor
-    res.send('<h1>Gooby has been found!!/h1>');
+    res.send('<h1>Gooby has been found!!</h1>');
 });
 
 // Start the server
